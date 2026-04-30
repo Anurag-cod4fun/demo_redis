@@ -1,0 +1,27 @@
+# CREATE
+curl -X POST http://localhost:8080/api/customers/create \
+  -H "Content-Type: application/json" \
+  -d '{"name":"Alice","email":"alice@example.com","status":"active","notes":"first customer"}'
+
+# LIST all
+curl -X POST http://localhost:8080/api/customers/list
+
+# GET by id
+curl -X POST http://localhost:8080/api/customers/get \
+  -H "Content-Type: application/json" \
+  -d '{"id":"your-id-here"}'
+
+# SEARCH by status
+curl -X POST http://localhost:8080/api/customers/search \
+  -H "Content-Type: application/json" \
+  -d '{"status":"active"}'
+
+# UPDATE
+curl -X POST http://localhost:8080/api/customers/update \
+  -H "Content-Type: application/json" \
+  -d '{"id":"your-id","name":"Updated","email":"updated@example.com","status":"inactive","notes":"updated"}'
+
+# DELETE
+curl -X POST http://localhost:8080/api/customers/delete \
+  -H "Content-Type: application/json" \
+  -d '{"id":"your-id-here"}'
